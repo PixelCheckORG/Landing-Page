@@ -130,8 +130,8 @@ const Contact = () => {
                     Check out our FAQ section for instant answers to common questions about 
                     PixelCheck's features, pricing, and technical details.
                   </p>
-                  <Button variant="outline" size="sm">
-                    View FAQ
+                  <Button variant="outline" size="sm" asChild>
+                    <a href="/faq">View FAQ</a>
                   </Button>
                 </Card>
               </div>
