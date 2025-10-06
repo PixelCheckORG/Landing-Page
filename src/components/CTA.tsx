@@ -3,7 +3,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-24">
+    <section id="get-started" className="py-24 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden">
