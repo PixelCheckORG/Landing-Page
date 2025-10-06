@@ -161,15 +161,6 @@ The built files will be in the `dist/` directory.
 - 📄 Exportable PDF reports
 - 🔍 Complete metadata extraction
 
-## 🔧 Development
-
-### Available Scripts
-
-- `bun dev` - Start development server
-- `bun build` - Build for production
-- `bun preview` - Preview production build
-- `bun lint` - Run ESLint
-
 ### Code Style
 
 - **TypeScript** for type safety
@@ -209,5 +200,3 @@ The landing page is fully responsive across:
 - **API Access**: Integration capabilities for developers
 
 ---
-
-**Built with ❤️ by Pixel Dev** - Empowering digital trust through AI innovation.
