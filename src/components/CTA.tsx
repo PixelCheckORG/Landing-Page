@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -37,12 +38,15 @@ const CTA = () => {
                 </Button>
                 
                 <Button 
+                  asChild
                   size="xl" 
                   variant="glass"
                   className="bg-primary-foreground/10 text-primary-foreground border-primary-foreground/20 hover:bg-primary-foreground/20"
                 >
-                  <Mail className="w-5 h-5" />
-                  Contact Sales
+                  <Link to="/contact-sales">
+                    <Mail className="w-5 h-5" />
+                    Contact Sales
+                  </Link>
                 </Button>
               </div>
 

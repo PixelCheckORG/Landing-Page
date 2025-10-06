@@ -1,15 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, Shield } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navItems = [
     { label: "Features", href: "#features" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Technology", href: "#technology" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    
+    // If we're not on the homepage, navigate there first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const target = document.querySelector(href) as HTMLElement | null;
+        target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    } else {
+      // We're already on homepage, just scroll
+      const target = document.querySelector(href) as HTMLElement | null;
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleGetStartedClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    handleNavClick(e, "#get-started");
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -28,12 +53,8 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                const target = document.querySelector(item.href) as HTMLElement | null;
-                target?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
-              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+              onClick={(e) => handleNavClick(e, item.href)}
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground cursor-pointer"
             >
               {item.label}
             </a>
@@ -44,7 +65,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           {/* Desktop CTA */}
           <Button asChild size="sm" className="hidden md:inline-flex">
-            <a href="#get-started">Get Started</a>
+            <a href="#get-started" onClick={handleGetStartedClick}>Get Started</a>
           </Button>
 
           {/* Mobile Menu */}
@@ -66,12 +87,8 @@ const Navbar = () => {
                   <a
                     key={item.label}
                     href={item.href}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      const target = document.querySelector(item.href) as HTMLElement | null;
-                      target?.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                   >
                     {item.label}
                   </a>
@@ -79,7 +96,7 @@ const Navbar = () => {
               </nav>
               <div className="mt-6">
                 <Button asChild className="w-full">
-                  <a href="#get-started">Get Started</a>
+                  <a href="#get-started" onClick={handleGetStartedClick}>Get Started</a>
                 </Button>
               </div>
             </SheetContent>
