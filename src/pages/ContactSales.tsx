@@ -329,7 +329,7 @@ const ContactSales = () => {
                         Mon-Fri, 9AM-6PM EST
                       </p>
                       <a href="tel:+15551234567" className="text-sm text-primary hover:underline">
-                        +1 (555) 123-4567
+                        +51 (01) 123-4567
                       </a>
                     </div>
                   </div>

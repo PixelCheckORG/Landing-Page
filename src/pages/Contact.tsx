@@ -21,13 +21,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone Support",
-      description: "+1 (555) 123-4567",
+      description: "+51 (01) 123-4567",
       detail: "For enterprise customers"
     },
     {
       icon: MapPin,
       title: "Office",
-      description: "San Francisco, CA",
+      description: "Lima, Peru",
       detail: "Visit us by appointment"
     }
   ];
