@@ -29,14 +29,22 @@ const CTA = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Button 
-                  size="xl" 
-                  className="bg-background text-foreground hover:bg-background/90 shadow-xl group"
+                <Button
+                    asChild
+                    size="xl"
+                    className="bg-background text-foreground hover:bg-background/90 shadow-xl group"
                 >
-                  Get Started Free
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <a
+                      href="https://pixel-check-app.netlify.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                  >
+                    Get Started Free
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
-                
+
+
                 <Button 
                   asChild
                   size="xl" 
