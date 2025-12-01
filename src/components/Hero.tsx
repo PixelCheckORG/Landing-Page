@@ -46,12 +46,16 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button variant="hero" size="xl" className="group">
-              Try PixelCheck Free
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button variant="hero" size="xl" className="group" asChild>
+              <a href="https://pixel-check-app.netlify.app/login" target="_blank" rel="noopener noreferrer">
+                Try PixelCheck Free
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
-            <Button variant="glass" size="xl">
-              See How It Works
+            <Button variant="glass" size="xl" asChild>
+              <a href="#how-it-works">
+                See How It Works
+              </a>
             </Button>
           </div>
 

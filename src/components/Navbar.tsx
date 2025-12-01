@@ -65,7 +65,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           {/* Desktop CTA */}
           <Button asChild size="sm" className="hidden md:inline-flex">
-            <a href="#get-started" onClick={handleGetStartedClick}>Get Started</a>
+            <a href="https://pixel-check-app.netlify.app/login" target="_blank" rel="noopener noreferrer">Get Started</a>
           </Button>
 
           {/* Mobile Menu */}
@@ -96,7 +96,7 @@ const Navbar = () => {
               </nav>
               <div className="mt-6">
                 <Button asChild className="w-full">
-                  <a href="#get-started" onClick={handleGetStartedClick}>Get Started</a>
+                  <a href="https://pixel-check-app.netlify.app/login" target="_blank" rel="noopener noreferrer">Get Started</a>
                 </Button>
               </div>
             </SheetContent>

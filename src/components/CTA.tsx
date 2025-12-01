@@ -35,7 +35,7 @@ const CTA = () => {
                     className="bg-background text-foreground hover:bg-background/90 shadow-xl group"
                 >
                   <a
-                      href="https://pixel-check-app.netlify.app/"
+                      href="https://pixel-check-app.netlify.app/login"
                       target="_blank"
                       rel="noopener noreferrer"
                   >
