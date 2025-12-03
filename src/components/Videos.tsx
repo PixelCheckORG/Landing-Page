@@ -16,7 +16,7 @@ const Videos = () => {
       icon: Package,
       title: "About PixelCheck",
       description: "Discover how PixelCheck works and why it's the most reliable solution for detecting AI-generated images.",
-      videoUrl: "https://www.youtube.com/embed/9J5gclvq5NY",
+      videoUrl: "https://www.youtube.com/embed/8NNYcHtn4Mo",
       placeholder: false
     }
   ];
